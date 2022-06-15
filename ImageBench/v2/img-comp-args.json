@@ -1,0 +1,58 @@
+{
+	"compare_args": {
+		"baseline_path":"C:/py/ImageBench/v2/sampling/training",
+		"runtime_path":"C:/py/ImageBench/v2/sampling/query",
+		"workspace_path":"C:/py/ImageBench/v2/workspace",
+		"mask_region": "",
+		"mask_region_excluding":"",
+		"aspect_ratio_required":"true",
+		"intermediate_output":"false",
+		"imgcap":"500",
+		"purge_old_artifacts":"true",
+	    "p_hash_parametric": {
+            "hash_size":"8"
+		},
+		"d_hash_parametric": {
+			"hash_size":"9"
+		},
+		"BRISK_FLANN_parametric":{
+		    "BRISK_FLANN_bl_confirmed_variance_auto_update(disabled)":"false",
+		    "BRISK_FLANN_parametric_baseline":"C:/py/ImageBench/v2/BRISK_FLANN_baselines/BF_sampling_base1.json",
+		    "BRISK_FLANN_baseline_metrics_auto_update(disabled)":"false",
+		    "BRISK_FLANN_gp_gpp_check_enabled":"true",
+		    "FLANNmatcher_accuracy":"0.5"
+		},
+		"similarity":[
+		    {
+				"method1":"perceptual_hashing",
+				"m1_score":"0",
+				"m1_match_operator":"and",
+				"m1_powered_on":"1"
+			},
+			{
+				"method2":"SSI",
+				"m2_score":"1.0",
+				"m2_match_operator":"and",
+				"m2_powered_on":"1"
+			},
+			{
+				"method3":"BRISK-FLANN",
+				"m3_score":"0",
+				"m3_match_operator":"and",
+				"m3_powered_on":"1"
+			},
+			{
+				"method4":"diff_hashing",
+				"m4_score":"0",
+				"m4_match_operator":"or",
+				"m4_powered_on":"1"
+			},
+			{
+				"method5":"haar_cascade",
+				"m5_score":"1",
+				"m5_match_operator":"and",
+				"m5_powered_on":"0"
+			}
+		]
+	}
+}
